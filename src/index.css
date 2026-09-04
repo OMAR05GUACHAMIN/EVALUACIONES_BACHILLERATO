@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* Estilos nativos de KaTeX para visualización de ecuaciones */
+@import "katex/dist/katex.min.css";
+
+@theme {
+  --color-brand-blue: #2563eb;
+  --color-brand-neon: #10b981;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-family: system-ui, -apple-system, sans-serif;
+}
