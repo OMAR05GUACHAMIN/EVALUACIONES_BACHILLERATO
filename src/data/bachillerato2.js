@@ -3,14 +3,14 @@ export const bachillerato2Data = [
   {
     id: "b2_t1",
     nombre: "Operaciones con Polinomios",
-    concepto: "Las operaciones algebraicas con polinomios (suma, resta, multiplicación y división) siguen las reglas del álgebra con coeficientes fraccionarios, la reducción de términos semejantes y la propiedad distributiva.",
+    concepto: "$$ Las operaciones algebraicas con polinomios (suma, resta, multiplicación y división) siguen las reglas del álgebra con coeficientes fraccionarios, la reducción de términos semejantes y la propiedad distributiva.",
     preguntas: [
       {
         id: 1,
         tema: "Suma de Polinomios",
         enunciado: "Dados los polinomios $f(x)$ y $g(x)$, halla la suma $f(x) + g(x)$:",
-        formula: "f(x) = \\frac{5}{7}x^4 - \\frac{4}{9}x^3 - \\frac{1}{5}x + \\frac{6}{11}, \\quad g(x) = -\\frac{2}{3}x^4 + \\frac{7}{8}x^3 - \\frac{4}{5}x^2 - \\frac{8}{11}x - 3",
-        opciones: [
+        formula: "\\begin{aligned} f(x) &= \\frac{5}{7}x^4 - \\frac{4}{9}x^3 - \\frac{1}{5}x + \\frac{6}{11} \\\\ g(x) &= -\\frac{2}{3}x^4 + \\frac{7}{8}x^3 - \\frac{4}{5}x^2 - \\frac{8}{11}x - 3 \\end{aligned}",
+          opciones: [
           { texto: "\\frac{1}{21}x^4 + \\frac{31}{72}x^3 - \\frac{4}{5}x^2 - \\frac{51}{55}x - \\frac{27}{11}", esCorrecta: true },
           { texto: "\\frac{3}{21}x^4 - \\frac{11}{72}x^3 - \\frac{4}{5}x^2 - \\frac{9}{55}x - \\frac{21}{11}", esCorrecta: false },
           { texto: "-\\frac{1}{21}x^4 + \\frac{31}{72}x^3 + \\frac{4}{5}x^2 - \\frac{51}{55}x + \\frac{27}{11}", esCorrecta: false },
@@ -22,7 +22,7 @@ export const bachillerato2Data = [
         id: 2,
         tema: "Resta de Polinomios",
         enunciado: "Dados los polinomios $f(x)$ y $g(x)$, encuentra el resultado de la resta $f(x) - g(x)$:",
-        formula: "f(x) = -\\frac{8}{3}x^3 + \\frac{1}{7}x^2 - \\frac{4}{9}x + \\frac{3}{4}, \\quad g(x) = -\\frac{12}{5}x^3 - \\frac{14}{3}x^2 - \\frac{13}{2}x - \\frac{5}{12}",
+        formula: "\\begin{aligned} f(x) = -\\frac{8}{3}x^3 + \\frac{1}{7}x^2 - \\frac{4}{9}x + \\frac{3}{4} \\\\ g(x) = -\\frac{12}{5}x^3 - \\frac{14}{3}x^2 - \\frac{13}{2}x - \\frac{5}{12} \\end{aligned}",
         opciones: [
           { texto: "-\\frac{4}{15}x^3 + \\frac{101}{21}x^2 + \\frac{109}{18}x + \\frac{7}{6}", esCorrecta: true },
           { texto: "-\\frac{76}{15}x^3 - \\frac{95}{21}x^2 - \\frac{125}{18}x + \\frac{1}{3}", esCorrecta: false },
@@ -35,7 +35,7 @@ export const bachillerato2Data = [
         id: 3,
         tema: "Multiplicación de Polinomios Racionales",
         enunciado: "Sean las funciones $f(x)$ y $g(x)$, halla el producto $f(x) \\cdot g(x)$:",
-        formula: "f(x) = \\frac{9x + 4}{5x - 3}, \\quad g(x) = \\frac{7x - 6}{8x - 12}",
+        formula: "\\begin{aligned} f(x) = \\frac{9x + 4}{5x - 3} \\\\ g(x) = \\frac{7x - 6}{8x - 12} \\end{aligned}",
         opciones: [
           { texto: "\\frac{63x^2 - 26x - 24}{40x^2 - 84x + 36}", esCorrecta: true },
           { texto: "\\frac{63x^2 + 54x - 24}{40x^2 - 60x + 36}", esCorrecta: false },
@@ -48,7 +48,7 @@ export const bachillerato2Data = [
         id: 4,
         tema: "División de Polinomios - Ejercicio 1",
         enunciado: "Realiza la división de polinomios y determina el cociente $Q(x)$ y el residuo $R(x)$:",
-        formula: "\\left(\\frac{3}{4}x^4 - \\frac{5}{6}x^3 + \\frac{1}{2}x^2 - \\frac{2}{3}x + \\frac{1}{4}\\right) \\div \\left(\\frac{1}{2}x^2 - \\frac{1}{3}x + \\frac{1}{2}\\right)",
+        formula: "\\begin{aligned} \\left(\\frac{3}{4}x^4 - \\frac{5}{6}x^3 + \\frac{1}{2}x^2 - \\frac{2}{3}x + \\frac{1}{4}\\right) \\\\ \\div \\left(\\frac{1}{2}x^2 - \\frac{1}{3}x + \\frac{1}{2}\\right) \\end{aligned}",
         opciones: [
           { texto: "Q(x) = \\frac{3}{2}x^2 - \\frac{2}{3}x - \\frac{17}{18}, \\quad R(x) = -\\frac{35}{54}x + \\frac{13}{18}", esCorrecta: true },
           { texto: "Q(x) = \\frac{3}{4}x^2 + \\frac{1}{3}x - \\frac{1}{2}, \\quad R(x) = \\frac{5}{6}x + \\frac{1}{4}", esCorrecta: false },
@@ -60,8 +60,8 @@ export const bachillerato2Data = [
       {
         id: 5,
         tema: "División de Polinomios - Ejercicio 2",
-        enunciado: "Realiza la división de polinomios con coeficientes fraccionarios:",
-        formula: "\\left(\\frac{2}{3}x^5 + \\frac{3}{4}x^4 - \\frac{5}{6}x^3 + \\frac{1}{2}x^2 - \\frac{1}{3}x + \\frac{1}{4}\\right) \\div \\left(\\frac{1}{4}x^2 + \\frac{1}{2}x - \\frac{1}{3}\\right)",
+        enunciado: "$$ Realiza la división de polinomios con coeficientes fraccionarios:",
+        formula: "\\begin{aligned} \\left(\\frac{2}{3}x^5 + \\frac{3}{4}x^4 - \\frac{5}{6}x^3 + \\frac{1}{2}x^2 - \\frac{1}{3}x + \\frac{1}{4}\\right) \\\\ \\div \\left(\\frac{1}{4}x^2 + \\frac{1}{2}x - \\frac{1}{3}\\right) \\end{aligned}",
         opciones: [
           { texto: "Q(x) = \\frac{8}{3}x^3 - \\frac{7}{3}x^2 + \\frac{44}{9}x - \\frac{98}{9}, \\quad R(x) = \\frac{182}{27}x - \\frac{365}{108}", esCorrecta: true },
           { texto: "Q(x) = \\frac{2}{3}x^3 + \\frac{3}{4}x^2 - \\frac{5}{6}x + 1, \\quad R(x) = \\frac{1}{3}x - \\frac{1}{4}", esCorrecta: false },
