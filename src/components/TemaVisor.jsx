@@ -5,7 +5,7 @@ import FormattedSolution from './FormattedSolution';
 export default function TemaVisor({ tema, alRegresar }) {
   // Estados para el alumno y la lección
   const [nombreEstudiante, setNombreEstudiante] = useState('');
-  const [cursoEstudiante, setCursoEstudiante] = useState('1.º de Bachillerato');
+  const [cursoEstudiante, setCursoEstudiante] = useState('1.º de Bachillerato Agropecuaria');
   const [pantallaActual, setPantallaActual] = useState('registro'); // 'registro' | 'leccion' | 'resultados'
 
   const [respuestas, setRespuestas] = useState({});
@@ -197,9 +197,7 @@ export default function TemaVisor({ tema, alRegresar }) {
               📖 Recordatorio Conceptual
             </h2>
             <div className="text-slate-600 leading-relaxed bg-slate-50 p-5 rounded-2xl border border-slate-150 text-sm">
-              {tema.concepto.split('$').map((parte, idx) => (
-                idx % 2 !== 0 ? <MathRenderer key={idx} formula={parte} /> : <span key={idx}>{parte}</span>
-              ))}
+              <MathRenderer formula={tema.concepto} inline={true} />
             </div>
           </section>
 
@@ -220,11 +218,17 @@ export default function TemaVisor({ tema, alRegresar }) {
                     <span className="text-xs text-slate-400 font-bold">{pregunta.tema}</span>
                   </div>
 
-                  <p className="font-bold text-slate-800 text-sm">{pregunta.enunciado}</p>
-
-                  <div className="bg-white p-6 rounded-xl border border-slate-200 flex justify-center items-center my-4 overflow-x-auto min-h-[90px]">
-                    <MathRenderer formula={pregunta.formula} block={true} />
+                  {/* Renderizado de Enunciado con soporte para LaTeX */}
+                  <div className="font-bold text-slate-800 text-sm">
+                    <MathRenderer formula={pregunta.enunciado} inline={true} />
                   </div>
+
+                  {/* Bloque de fórmula principal (si existe en la pregunta) */}
+                  {pregunta.formula && (
+                    <div className="bg-white p-6 rounded-xl border border-slate-200 flex justify-center items-center my-4 overflow-x-auto min-h-[90px]">
+                      <MathRenderer formula={pregunta.formula} block={true} />
+                    </div>
+                  )}
 
                   {/* Opciones de respuesta */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -254,7 +258,7 @@ export default function TemaVisor({ tema, alRegresar }) {
                           className={`text-left p-4 rounded-xl text-sm font-semibold transition border cursor-pointer min-h-[55px] flex items-center justify-between gap-3 ${estiloBoton}`}
                         >
                           <span className="flex-1 overflow-x-auto">
-                            <MathRenderer formula={opcion.texto} />
+                            <MathRenderer formula={opcion.texto} inline={true} />
                           </span>
                         </button>
                       );
